@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>WSB</title>
+        <title>WSB - O nas</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -48,11 +48,10 @@
                                     </svg>
                                 </div>
 
-                                <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Start</h2>
+                                <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">O nas</h2>
 
                                 <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                                    Teskt startowy
-                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam, itaque tempore ea ipsa dolorem in id. Provident quaerat officiis amet tempore, autem rerum est officia dignissimos molestias enim illum dolores.
+                                    Teskt dla informacji o nas
                                 </p>
                             </div>
                         </div>
