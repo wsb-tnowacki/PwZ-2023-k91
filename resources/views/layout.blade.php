@@ -33,7 +33,7 @@
 
             <div class="max-w-7xl mx-auto p-6 lg:p-8">
                 <nav>
-                    <a href="/">Główna </a> | <a href="/onas">O nas</a> | <a href="/kontakt">Kontakt</a>
+                    <a href="{{ route('start')}}">Główna </a> | <a href="{{ route('onas')}}">O nas</a> | <a href="{{ route('kontakt')}}">Kontakt</a>
                 </nav><br>
                 <div class="flex justify-center">
                     <svg viewBox="0 0 62 65" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-16 w-auto bg-gray-100 dark:bg-gray-900">
