@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\StartController;
 use Illuminate\Support\Facades\Route;
 
@@ -40,4 +41,7 @@ Route::controller(StartController::class)->group(function(){
     Route::get('/',  'start')->name('start');
     Route::get('/kontakt',  'kontakt')->name('kontakt');
     Route::get('/onas',  'onas')->name('onas');
+    /* Route::get('/onas/{id}/test/{onas}',  'onas2')->name('onas2'); */
 });
+
+Route::resource('posty',PostController::class);
