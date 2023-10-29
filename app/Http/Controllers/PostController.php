@@ -27,7 +27,10 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        echo 'ok';
+        //dump($request);
+        //dd($request);
+        //$request->dump();
+        return redirect()->route('posty.index')->with('message', "Post dodany poprawnie");
     }
 
     /**
