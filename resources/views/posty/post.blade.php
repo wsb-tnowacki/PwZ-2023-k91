@@ -62,11 +62,14 @@
 @endif
         <br>
         <a href="{{route('posty.index')}}"><button type="button" class="btn btn-primary">Powrót do listy postów</button></a>
+        @auth
         <a href="{{route('posty.edit', $post->id)}}"><button class="btn btn-success m-1" type="button">Edycja posta</button></a>
         <form action="{{route('posty.destroy', $post->id)}}" method="post">
             @csrf
             @method('DELETE')
             <button class="btn btn-danger m-1" type="submit">Usuń posta</button>
-            </form>
+            </form>  
+        @endauth
+        
     </form>
 @endsection
