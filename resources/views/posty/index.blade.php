@@ -21,11 +21,13 @@
     </thead>
     <tbody>
       @if ($posty->count())
+      @php($lp=1)
+      @php($lp=$posty->firstItem())
       @foreach ($posty as $post)
       <tr>
-        <th scope="row">{{ $post['id'] }}</th>
+        <th scope="row">{{ $lp++ }}</th>
         <td><a href="{{route('posty.show', $post->id)}}">{{ $post['tytul'] }}</a></td>
-        <td>{{ $post->autor }}</td>
+        <td>{{ $post->user->name }}</td>
         <td>{{ date('j F Y H:i:s', strtotime($post->created_at)) }}</td>
         @auth
         <td class="d-flex flex-row"><a href="{{route('posty.edit', $post->id)}}"><button class="btn btn-success m-1" type="button">E</button></a>
@@ -46,4 +48,5 @@
       
     </tbody>
   </table>
+  {{ $posty->links() }}
 @endsection

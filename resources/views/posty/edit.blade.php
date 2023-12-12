@@ -30,14 +30,14 @@
         </div>
         <div class="form-group">
             <label for="autor">Autor</label>
-            <input type="text" class="form-control" name="autor" id="autor" placeholder="Podaj autora" value="@if(old('autor') !== null) {{old('autor')}} @else {{$post->autor}} @endif">
+            <input type="text" class="form-control" name="autor" id="autor" placeholder="Podaj autora" value="@if(old('autor') !== null) {{old('autor')}} @else {{$post->user->name}} @endif">
             @if ($errors->has('autor'))
             <div class="alert alert-danger">
             @foreach ($errors->get('autor') as $error)
                 <div>{{ $error }} </div>
             @endforeach
             </div> 
-@endif
+            @endif
         </div>
         <div class="form-group">
             <label for="email">Email</label>
@@ -63,11 +63,12 @@
 @endif
         <br>
         <button type="submit" class="btn btn-success m-1">Zmień posta</button>
-        <form action="{{route('posty.destroy', $post->id)}}" method="post">
-            @csrf
-            @method('DELETE')
-            <button class="btn btn-danger m-1" type="submit">Usuń posta</button>
-            </form>
+        
         <a href="{{route('posty.index')}}"><button type="button" class="btn btn-primary m-1">Powrót do listy postów</button></a>
     </form>
+    <form action="{{route('posty.destroy', $post->id)}}" method="post">
+        @csrf
+        @method('DELETE')
+        <button class="btn btn-danger m-1" type="submit">Usuń posta</button>
+        </form>
 @endsection

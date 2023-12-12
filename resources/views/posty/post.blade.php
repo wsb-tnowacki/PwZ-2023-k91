@@ -29,7 +29,7 @@
         </div>
         <div class="form-group">
             <label for="autor">Autor</label>
-            <input type="text" class="form-control" name="autor" id="autor" placeholder="Podaj autora" value="{{ $post->autor }}" disabled="disabled">
+            <input type="text" class="form-control" name="autor" id="autor" placeholder="Podaj autora" value="{{ $post->user->name }}" disabled="disabled">
             @if ($errors->has('autor'))
             <div class="alert alert-danger">
             @foreach ($errors->get('autor') as $error)
